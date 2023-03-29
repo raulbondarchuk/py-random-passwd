@@ -63,11 +63,12 @@ def clearConsole():
 
 def viewPasswd():
     with open('passwd.txt', 'r') as file:
-        if len(file.read()) > 0:
-            passwd = file.read()
-            return passwd
-        else:
-            return "UNDEFINED"
+        passwd = file.read()
+            
+    if len(passwd) <= 0:
+        return "Undefined"
+    else:
+        return passwd
 
 def main():
     exit = False
@@ -90,12 +91,12 @@ def main():
 
         elif choice == "2":
             dropPasswd()
-            
             clearConsole()
         
         elif choice == "3":
             clearConsole()
             changePasswd()
+            
         elif choice == "4":
             exit = True
             clearConsole()
