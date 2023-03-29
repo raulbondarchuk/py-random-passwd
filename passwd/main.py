@@ -96,7 +96,7 @@ def main():
         elif choice == "3":
             clearConsole()
             changePasswd()
-            
+
         elif choice == "4":
             exit = True
             clearConsole()
